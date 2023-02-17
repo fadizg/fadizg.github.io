@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fadi.Zgheib</title>
+    <link rel="stylesheet" href="style.css">
+    <!--  Font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+
+</head>
+<body>
+    <div class="hero-header">
+        <div class="wrapper">
+            <header>
+                <div class="logo">
+                    <i class="fas fa-f"></i>
+                    <div class="logo-text">Fadi Zgheib</div>
+                </div>
+                <nav>
+                    <div class="togglebtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <!-- 
+                        <li><a href="#">Portofolio</a></li>
+                        <li><a href="#">Blog</a></li>
+                        -->
+                        <li><a href="assest/Aktueller Lebenslauf01.pdf">Resume</a></li>
+                        <li><a href="mailto:f.zgheib@gmx.de?subject=%20Contact%20">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="hidden-container">
+                <h1>Elektroauto mit eigenem Solarstrom laden</h1>
+                <form name="costcalculator">
+                    <div class="package-type">
+                      <input id="leistung" placeholder="Fahrleisung pro Jahr"  onchange="setFahrLeistung(this.value)">
+                    </div>
+                  
+                    <button type="button" onclick="calculatePrice()">Calculate</button>
+                    <div id="price"></div> 
+                  </form>
+                
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        
+        function calculatePrice()
+        {
+            var fahrLeistung = document.getElementById('leistung').value;
+            if (fahrLeistung < 1000) {
+                document.getElementById('price').innerHTML = "Mindestens 1000 km Fahrleistung";
+                return
+            }
+            if(fahrLeistung <= 4500){
+                kosten = calculateCosts(fahrLeistung)
+                text = `Es werden 3 Module gebraucht, um die Energie für ${fahrLeistung} Km pro Jahr zu liefern.
+                Kosten liegen bei  ${kosten} € monatlich.`
+                document.getElementById('price').innerHTML = text;
+            }
+        }
+        function calculateCosts(leistung){
+            return Math.round((leistung /12) * 0.29);
+        }
+    </script>
+</body>
+</html>
