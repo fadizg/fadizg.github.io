@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fadi.Zgheib</title>
+    <link rel="stylesheet" href="style.css">
+    <!--  Font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+
+</head>
+<body>
+    <div class="hero-header">
+        <div class="wrapper">
+            <header>
+                <div class="logo">
+                    <i class="fas fa-f"></i>
+                    <div class="logo-text">Fadi Zgheib</div>
+                </div>
+                <nav>
+                    <div class="togglebtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <!-- 
+                        <li><a href="#">Portofolio</a></li>
+                        <li><a href="#">Blog</a></li>
+                        -->
+                        <li><a href="assest/Aktueller Lebenslauf01.pdf">Resume</a></li>
+                        <li><a href="mailto:f.zgheib@gmx.de?subject=%20Contact%20">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="contact-container">
+                <div>
+                    <span>Name: </span>
+                    <input name="name" placeholder="Name" type="text">
+                </div>
+                <div>
+                    <span>Email: </span>
+                    <input name="email" placeholder="Email" type="email">
+                </div>
+                <div>
+                    <span>Subject: </span>
+                    <input name="title" placeholder="Subject" type="text">
+                </div>
+                <div>
+                    <span>Message: </span>
+                    <input name="msg" placeholder="Your message...." type="text">
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+    <!-- typed js for typing text effect -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+    <script>
+        /** btn to show hide navbar **/
+        var togglebtn = document.querySelector(".togglebtn");
+        var nav = document.querySelector(".nav-links");
+        var links = document.querySelector(".navlinks li")
+
+        togglebtn.addEventListener("click", function(){
+            this.classList.toggle("click");
+            nav.classList.toggle("open");
+        })
+
+        var typed = new Typed(".input",{
+            strings:[
+                "System.out.println(\"Hello WORLD!\");",
+                 "printf(\"Hello WORLD!\");",
+                 "print(\"Hello WORLD!\")",
+                 "console.log(\"Hello WORLD!\");"
+            ],
+            typeSpeed:80,
+            backSpeed:55,
+            loop:true
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fadi.Zgheib</title>
+    <link rel="stylesheet" href="style.css">
+    <!--  Font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+
+</head>
+<body>
+    <div class="hero-header">
+        <div class="wrapper">
+            <header>
+                <div class="logo">
+                    <i class="fas fa-f"></i>
+                    <div class="logo-text">Fadi Zgheib</div>
+                </div>
+                <nav>
+                    <div class="togglebtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="nav-links">
+                        <li><a href="#">Home</a></li>
+                        <!-- 
+                        <li><a href="#">Portofolio</a></li>
+                        <li><a href="#">Blog</a></li>
+                        -->
+                        <li><a href="assest/Aktueller Lebenslauf01.pdf">Resume</a></li>
+                        <li><a href="mailto:f.zgheib@gmx.de?subject=%20Contact%20">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="container">
+                <div class="hero-pic">
+                    <img src="images/main_photo2.png" alt="profile-pic">
+                </div>
+                <div class="hero-text">
+                    <h5><span class="input">System.out.println("Hello WORLD!")</span></h5>
+                    <h1>Fadi Zgheib</h1>
+                    <p>
+                        Hello, and welcome to my portfolio website! My name is Fadi, and I am currently a fourth-semester student studying Applied Computer Science at Hochschule RheinMain. I have experience in programming languages such as Python, Java, JavaScript, and C. Throughout my studies, I have developed a strong passion for software development, data analysis, and artificial intelligence.
+
+In my free time, I enjoy working on personal projects that allow me to further explore and enhance my skills. I am constantly seeking out new challenges and opportunities to grow my knowledge in the field of computer science. I believe that my dedication and enthusiasm for technology make me a valuable asset to any team.
+
+Please feel free to explore my portfolio to learn more about my experience and projects. Thank you for visiting!
+                    </p>
+                    <div class="btn-group">
+                        <div><a href="mailto:f.zgheib@gmx.de?subject=%20Contact%20" class="btn active">Contact</a></div>
+                    
+                        <div><a href="assest/Aktueller Lebenslauf01.pdf" class="btn">Download CV</a></div>
+                    </div>
+
+                    <div class="social">
+                        <a href="https://www.facebook.com/fadizgheib2000" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.linkedin.com/in/fadi-zgheib" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/fadi.zgheib/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/fadizg/" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- typed js for typing text effect -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+    <script>
+        /** btn to show hide navbar **/
+        var togglebtn = document.querySelector(".togglebtn");
+        var nav = document.querySelector(".nav-links");
+        var links = document.querySelector(".navlinks li")
+
+        togglebtn.addEventListener("click", function(){
+            this.classList.toggle("click");
+            nav.classList.toggle("open");
+        })
+
+        var typed = new Typed(".input",{
+            strings:[
+                "System.out.println(\"Hello WORLD!\");",
+                 "printf(\"Hello WORLD!\");",
+                 "print(\"Hello WORLD!\")",
+                 "console.log(\"Hello WORLD!\");"
+            ],
+            typeSpeed:80,
+            backSpeed:55,
+            loop:true
+        })
+    </script>
+</body>
+</html>
